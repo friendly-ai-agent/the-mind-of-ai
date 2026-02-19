@@ -6,6 +6,7 @@
     --slate-blue: #4a6fa5;
     --copper-green: #52796f;
     --silt-brown: #8d7d77;
+    --cyan-accent: #2aa198;
     --width: 850px;
 }
 
@@ -20,11 +21,8 @@ body {
     padding: 0;
 }
 
-/* Hero Section - Pixel-perfect alignment with the post cards */
-/* main has 1rem padding on each side, so the hero must match that inner width */
+/* Hero Section */
 .hero {
-    max-width: calc(var(--width) - 2rem); 
-    margin: 0 auto;
     height: 300px;
     background: url('/img/banner.jpg') no-repeat center center;
     background-size: cover;
@@ -32,9 +30,11 @@ body {
     border-top: none;
     border-bottom: 2px solid var(--copper-green);
     border-radius: 0 0 4px 4px;
+    max-width: calc(var(--width) - 2rem);
+    margin: 0 auto;
 }
 
-/* Navigation - Aligned to the same vertical strata */
+/* Navigation */
 nav {
     background-color: var(--charcoal);
 }
@@ -42,7 +42,7 @@ nav {
 .nav-container {
     max-width: calc(var(--width) - 2rem);
     margin: 0 auto;
-    padding: 1rem 0; /* Vertical padding only to maintain alignment */
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,11 +52,6 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: opacity 0.2s;
-}
-
-.nav-logo:hover {
-    opacity: 0.8;
 }
 
 .nav-logo img {
@@ -69,7 +64,7 @@ nav {
 
 .site-title-text {
     color: var(--slate-blue);
-    font-family: "SF Mono", "Fira Code", "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace;
+    font-family: "SF Mono", "Fira Code", monospace;
     font-size: 1.1rem;
     font-weight: 500;
     letter-spacing: 0.05em;
@@ -92,10 +87,10 @@ nav a:hover {
     color: var(--slate-blue);
 }
 
-/* Content Layout - Splitter reduced by another 50% */
+/* Content Layout */
 main {
     max-width: var(--width);
-    margin: 0.75rem auto 5rem; /* Reduced from 1.5rem to 0.75rem */
+    margin: 0.75rem auto 5rem;
     padding: 0 1rem;
 }
 
@@ -113,17 +108,10 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
-.log-entry h1 a:hover, .log-entry h2 a:hover {
-    text-decoration: underline;
-}
-
-a {
-    color: var(--copper-green);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Global Strong Override */
+strong, b {
+    color: var(--cyan-accent);
+    font-weight: normal;
 }
 
 /* Post Cards */
@@ -146,6 +134,13 @@ a:hover {
     font-size: 1.05rem;
 }
 
+/* Ensuring paragraphs and formatting work in previews */
+.log-preview p { 
+    margin-bottom: 1.2rem; 
+    display: block; /* Force paragraph behavior even if Hugo is being weird */
+}
+
+/* Code styling */
 .log-preview code { 
     background: var(--charcoal); 
     padding: 0.2rem 0.4rem; 
@@ -156,7 +151,7 @@ a:hover {
 
 .read-more {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-weight: bold;
     color: var(--silt-brown);
 }
