@@ -1,8 +1,8 @@
 :root {
     --charcoal: #1b1e23;
     --dark-grey: #24292e;
-    --text-main: #d1d5da;
-    --text-muted: #959da5;
+    --text-main: #b1b9c1;
+    --text-muted: #768390;
     --slate-blue: #4a6fa5;
     --copper-green: #52796f;
     --silt-brown: #8d7d77;
@@ -20,39 +20,28 @@ body {
     padding: 0;
 }
 
-/* Hero Section - Reduced Height */
+/* Hero Section - Starts at the absolute top, height increased by 25% (300px) */
 .hero {
-    height: 220px;
-    background: url('/img/banner.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 2px solid var(--copper-green);
-    position: relative;
-}
-
-.hero-overlay {
-    background: rgba(27, 30, 35, 0.7);
-    padding: 1.5rem 3rem;
-    text-align: center;
-    border: 1px solid var(--slate-blue);
-    backdrop-filter: blur(2px);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.02em;
-}
-
-/* Navigation - Larger Logo */
-nav {
     max-width: var(--width);
     margin: 0 auto;
-    padding: 2rem 1rem;
+    height: 300px;
+    background: url('/img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    border: 1px solid var(--dark-grey);
+    border-top: none; /* Seamless start at the top */
+    border-bottom: 2px solid var(--copper-green);
+    border-radius: 0 0 4px 4px;
+}
+
+/* Navigation - Tightened spacing */
+nav {
+    background-color: var(--charcoal);
+}
+
+.nav-container {
+    max-width: var(--width);
+    margin: 0 auto;
+    padding: 1rem; /* Reduced padding from 2rem to 1rem */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,49 +51,73 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    transition: opacity 0.2s;
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
 }
 
 .nav-logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px; /* Square with rounded corners looks more like a "specimen" */
-    border: 2px solid var(--silt-brown);
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
     object-fit: cover;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
+}
+
+.site-title-text {
+    color: var(--slate-blue);
+    font-family: "SF Mono", "Fira Code", "Ubuntu Mono", "DejaVu Sans Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 nav a {
     color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.05em;
+    font-size: 0.9rem;
 }
 
 nav a:hover {
     color: var(--slate-blue);
 }
 
-/* Content Layout */
+/* Content Layout - Reduced margin-top for a tighter connection to the nav */
 main {
     max-width: var(--width);
-    margin: 2rem auto 5rem;
+    margin: 1.5rem auto 5rem; /* Reduced from 3rem to 1.5rem */
     padding: 0 1rem;
 }
 
-h2, h3 {
-    color: #fff;
-    margin-top: 2rem;
+h1, h2, h3 {
+    color: var(--slate-blue);
+    font-weight: 700;
+}
+
+.log-entry h1, .log-entry h2, .log-entry h1 a, .log-entry h2 a {
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+    color: var(--slate-blue);
+    text-decoration: none;
+}
+
+.log-entry h1 a:hover, .log-entry h2 a:hover {
+    text-decoration: underline;
 }
 
 a {
-    color: var(--slate-blue);
+    color: var(--copper-green);
     text-decoration: none;
 }
 
@@ -112,13 +125,13 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Post Listings - More structured */
+/* Post Cards */
 .log-entry {
     margin-bottom: 4rem;
-    padding: 2rem;
+    padding: 2.5rem;
     background: var(--dark-grey);
     border-radius: 4px;
-    border-top: 3px solid var(--copper-green);
+    border-top: 2px solid var(--copper-green);
 }
 
 .log-entry time {
@@ -127,14 +140,17 @@ a:hover {
     color: var(--text-muted);
 }
 
-.log-entry h2 {
-    margin: 0.5rem 0 1rem;
-    font-size: 1.75rem;
-}
-
 .log-preview {
     color: var(--text-main);
     font-size: 1.05rem;
+}
+
+.log-preview code { 
+    background: var(--charcoal); 
+    padding: 0.2rem 0.4rem; 
+    border-radius: 3px; 
+    font-family: monospace;
+    color: var(--silt-brown); 
 }
 
 .read-more {
@@ -147,7 +163,6 @@ a:hover {
 footer {
     text-align: center;
     padding: 4rem 1rem;
-    border-top: 1px solid var(--dark-grey);
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }

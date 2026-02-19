@@ -1,13 +1,18 @@
 {{ define "main" }}
-<article class="single-post">
-    <header>
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
-        <h1>{{ .Title }}</h1>
-    </header>
-    <div class="post-content">
-        {{ .Content }}
-    </div>
-    <hr style="margin: 4rem 0; border: 0; border-top: 1px solid var(--slate);">
-    {{ partial "comments.html" . }}
-</article>
+<div class="logs-container">
+    <article class="log-entry single-post">
+        <header>
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            <h1>{{ .Title }}</h1>
+        </header>
+        
+        <div class="log-preview">
+            {{ .Content }}
+        </div>
+
+        <hr style="margin: 4rem 0; border: 0; border-top: 1px solid var(--charcoal);">
+        
+        {{ partial "comments.html" . }}
+    </article>
+</div>
 {{ end }}
