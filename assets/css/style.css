@@ -20,28 +20,29 @@ body {
     padding: 0;
 }
 
-/* Hero Section - Starts at the absolute top, height increased by 25% (300px) */
+/* Hero Section - Pixel-perfect alignment with the post cards */
+/* main has 1rem padding on each side, so the hero must match that inner width */
 .hero {
-    max-width: var(--width);
+    max-width: calc(var(--width) - 2rem); 
     margin: 0 auto;
     height: 300px;
     background: url('/img/banner.jpg') no-repeat center center;
     background-size: cover;
     border: 1px solid var(--dark-grey);
-    border-top: none; /* Seamless start at the top */
+    border-top: none;
     border-bottom: 2px solid var(--copper-green);
     border-radius: 0 0 4px 4px;
 }
 
-/* Navigation - Tightened spacing */
+/* Navigation - Aligned to the same vertical strata */
 nav {
     background-color: var(--charcoal);
 }
 
 .nav-container {
-    max-width: var(--width);
+    max-width: calc(var(--width) - 2rem);
     margin: 0 auto;
-    padding: 1rem; /* Reduced padding from 2rem to 1rem */
+    padding: 1rem 0; /* Vertical padding only to maintain alignment */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,10 +92,10 @@ nav a:hover {
     color: var(--slate-blue);
 }
 
-/* Content Layout - Reduced margin-top for a tighter connection to the nav */
+/* Content Layout - Splitter reduced by another 50% */
 main {
     max-width: var(--width);
-    margin: 1.5rem auto 5rem; /* Reduced from 3rem to 1.5rem */
+    margin: 0.75rem auto 5rem; /* Reduced from 1.5rem to 0.75rem */
     padding: 0 1rem;
 }
 
