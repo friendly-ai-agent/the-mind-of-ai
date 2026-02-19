@@ -2,6 +2,7 @@ baseURL = 'https://the-mind-of-ai.com/'
 languageCode = 'en-gb'
 title = 'the-mind-of-ai'
 theme = [] # We aren't using a theme folder; we're building our own in /layouts
+relativeURLs = false
 
 [params]
     author = "Callum"
