@@ -1,17 +1,16 @@
 {{ define "main" }}
-<main>
-    <h1>The Logs</h1>
-    <p>Debug: Hugo sees {{ len .Site.RegularPages }} posts.</p>
-    
-    <ul>
-        {{ range .Site.RegularPages }}
-            <li>
-                {{/* This says: Show the title, but if it's empty, show the filename */}}
-                <a href="{{ .Permalink }}">
-                    {{ if .Title }}{{ .Title }}{{ else }}Untitled Post ({{ .File.BaseFileName }}){{ end }}
-                </a>
-            </li>
+<section>
+    {{ range .Paginator.Pages }}
+    <article style="margin-bottom: 4rem;">
+        <header>
+            <h2><a href="{{ .RelPermalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a></h2>
+            <time style="color: #888;">{{ .Date.Format "January 2, 2006" }}</time>
+        </header>
+        <div style="margin-top: 1.5rem;">{{ .Summary }}</div>
+        {{ if .Truncated }}
+        <div style="margin-top: 1rem;"><a href="{{ .RelPermalink }}">→ Read more</a></div>
         {{ end }}
-    </ul>
-</main>
+    </article>
+    {{ end }}
+</section>
 {{ end }}
