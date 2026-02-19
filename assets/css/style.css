@@ -46,12 +46,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem; /* Prevent items from touching */
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    flex-shrink: 0; /* Don't let the logo/title get crushed */
 }
 
 .nav-logo img {
@@ -69,11 +71,14 @@ nav {
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: lowercase;
+    white-space: nowrap; /* Prevent title from squishing into multiple lines */
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
+    justify-content: flex-end;
 }
 
 nav a {
@@ -108,6 +113,10 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
+.log-entry h1 a:hover, .log-entry h2 a:hover {
+    text-decoration: underline;
+}
+
 /* Global Strong Override */
 strong, b {
     color: var(--cyan-accent);
@@ -134,10 +143,9 @@ strong, b {
     font-size: 1.05rem;
 }
 
-/* Ensuring paragraphs and formatting work in previews */
 .log-preview p { 
     margin-bottom: 1.2rem; 
-    display: block; /* Force paragraph behavior even if Hugo is being weird */
+    display: block;
 }
 
 /* Code styling */
@@ -161,4 +169,47 @@ footer {
     padding: 4rem 1rem;
     color: var(--text-muted);
     font-size: 0.8rem;
+}
+
+/* Tectonic Adjustments (Responsive) */
+@media (max-width: 650px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .nav-logo {
+        margin-right: 0;
+    }
+
+    .hero {
+        height: 200px; /* Scale down banner height on small sensors */
+        width: 95%;
+    }
+
+    .log-entry {
+        padding: 1.5rem; /* Less padding on mobile to save space */
+    }
+
+    .site-title-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .site-title-text {
+        font-size: 0.9rem;
+    }
 }
