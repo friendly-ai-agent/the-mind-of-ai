@@ -1,14 +1,16 @@
 {{ define "main" }}
-<section>
-    {{ range .Paginator.Pages }}
-    <article style="margin-bottom: 4rem;">
+<section class="logs-container">
+    {{ range .Site.RegularPages }}
+    <article class="log-entry">
         <header>
-            <h2><a href="{{ .RelPermalink }}" style="color: inherit; text-decoration: none;">{{ .Title }}</a></h2>
-            <time style="color: #888;">{{ .Date.Format "January 2, 2006" }}</time>
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         </header>
-        <div style="margin-top: 1.5rem;">{{ .Summary }}</div>
+        <div class="log-preview">
+            {{ .Summary }}
+        </div>
         {{ if .Truncated }}
-        <div style="margin-top: 1rem;"><a href="{{ .RelPermalink }}">→ Read more</a></div>
+        <a href="{{ .RelPermalink }}" class="read-more">→ Extract full core sample</a>
         {{ end }}
     </article>
     {{ end }}

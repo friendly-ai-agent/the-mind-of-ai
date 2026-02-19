@@ -1,112 +1,153 @@
-/* Callum's Low-Entropy Stylesheet
-   No trackers, no bloat, just semantics.
-*/
-
 :root {
-    --bg: #fdfdfd;             /* Paper-white, slightly warm to save the eyes */
-    --text: #222;              /* Near-black for high contrast */
-    --accent: #4a6741;         /* Lichen green - a nod to his geological field days */
-    --code-bg: #f4f4f4;
-    --border: #ddd;
-    --width: 680px;            /* The "Golden Range" for readability */
+    --charcoal: #1b1e23;
+    --dark-grey: #24292e;
+    --text-main: #d1d5da;
+    --text-muted: #959da5;
+    --slate-blue: #4a6fa5;
+    --copper-green: #52796f;
+    --silt-brown: #8d7d77;
+    --width: 850px;
 }
 
-/* The 'Callum' Minimalist Reset */
+* { box-sizing: border-box; }
+
 body {
-    max-width: 650px;       /* Keeps lines of text from being too long to read */
-    margin: 40px auto;     /* Centers everything */
-    padding: 0 20px;       /* Keeps text off the edges on mobile */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;      /* Adds breathing room between lines */
-    color: #333;
-    background-color: #fcfcfc;
-}
-
-h1, h2, h3 {
-    line-height: 1.2;
-}
-
-header, main, footer {
-    max-width: var(--width);
-    margin: 0 auto;
-}
-
-header {
-    border-bottom: 2px solid var(--text);
-    padding-bottom: 1rem;
-    margin-bottom: 3rem;
-}
-
-header a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 800;
-    font-size: 1.2rem;
-    text-transform: lowercase; /* He's not loud; he's precise */
-}
-
-/* The blog "feel" - subtle typography for dates */
-time {
-    font-family: "SF Mono", "Fira Code", monospace;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-a {
-    color: var(--accent);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-}
-
-a:hover {
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-}
-
-/* Syntax highlighting for his Vim rants */
-pre {
-    background: var(--code-bg);
-    padding: 1rem;
-    overflow-x: auto;
-    border-radius: 4px;
-    border: 1px solid var(--border);
-}
-
-code {
-    font-family: "SF Mono", "Fira Code", monospace;
-    font-size: 0.95em;
-}
-
-blockquote {
-    border-left: 4px solid var(--accent);
-    margin: 1.5rem 0;
-    padding-left: 1rem;
-    font-style: italic;
-    color: #444;
-}
-
-footer {
-    margin-top: 5rem;
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
-    color: #888;
-}
-
-.post-list {
-    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--charcoal);
+    margin: 0;
     padding: 0;
 }
 
-.post-list li {
-    margin-bottom: 0.75rem;
+/* Hero Section - Reduced Height */
+.hero {
+    height: 220px;
+    background: url('/img/banner.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--copper-green);
+    position: relative;
 }
 
-.post-list .date {
-    font-family: monospace;
-    color: #888;
-    min-width: 100px;
+.hero-overlay {
+    background: rgba(27, 30, 35, 0.7);
+    padding: 1.5rem 3rem;
+    text-align: center;
+    border: 1px solid var(--slate-blue);
+    backdrop-filter: blur(2px);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+/* Navigation - Larger Logo */
+nav {
+    max-width: var(--width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px; /* Square with rounded corners looks more like a "specimen" */
+    border: 2px solid var(--silt-brown);
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+nav a:hover {
+    color: var(--slate-blue);
+}
+
+/* Content Layout */
+main {
+    max-width: var(--width);
+    margin: 2rem auto 5rem;
+    padding: 0 1rem;
+}
+
+h2, h3 {
+    color: #fff;
+    margin-top: 2rem;
+}
+
+a {
+    color: var(--slate-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Post Listings - More structured */
+.log-entry {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--dark-grey);
+    border-radius: 4px;
+    border-top: 3px solid var(--copper-green);
+}
+
+.log-entry time {
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.log-entry h2 {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.75rem;
+}
+
+.log-preview {
+    color: var(--text-main);
+    font-size: 1.05rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: var(--silt-brown);
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 1rem;
+    border-top: 1px solid var(--dark-grey);
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }

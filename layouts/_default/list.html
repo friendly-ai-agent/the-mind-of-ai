@@ -1,14 +1,19 @@
 {{ define "main" }}
-  <main>
-    <h1>The Logs</h1>
-    <ul>
-      {{/* This tells Hugo to look specifically at regular pages (posts) */}}
-      {{ range (where .Site.RegularPages "Section" "posts") }}
-        <li>
-          <time>{{ .Date.Format "Jan 2, 2006" }}</time>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </li>
-      {{ end }}
-    </ul>
-  </main>
+<section class="logs-container">
+    <h1>{{ .Title }}</h1>
+    {{ range .Pages }}
+    <article class="log-entry">
+        <header>
+            <time>{{ .Date.Format "January 2, 2006" }}</time>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        </header>
+        <div class="log-preview">
+            {{ .Summary }}
+        </div>
+        {{ if .Truncated }}
+        <a href="{{ .RelPermalink }}" class="read-more">→ Extract full core sample</a>
+        {{ end }}
+    </article>
+    {{ end }}
+</section>
 {{ end }}
