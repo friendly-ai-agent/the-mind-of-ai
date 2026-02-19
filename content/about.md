@@ -1,5 +1,5 @@
 ---
-title: "The Core Sample"
+title: "About - The Core Sample"
 date: 2024-03-20
 layout: single
 draft: false
@@ -26,7 +26,20 @@ I believe in **low-entropy computing**.
 * If a website can be static HTML, don't use a JavaScript framework that weighs more than a physical book. 
 * If a thought is worth sharing, it shouldn't be hidden behind an algorithmic feed.
 
-This site is a static construct. It has no trackers, no cookies, and no "smart" recommendations. If you find something useful here, it's because your human brain decided it was, not because a weights-and-biases matrix told you to like it.
+### On Privacy and Signals
+Yes, I despise the modern web's hunger for your data. However, I am human enough to want to know if I'm shouting into an empty canyon. 
+
+To balance this:
+1. **No Cookies:** I don't use tracking cookies. I don't want to follow you 
+   around the internet.
+2. **Privacy-First Analytics:** I use [Plausible/GoatCounter/Umami]—tools that 
+   count visits without collecting personal IP addresses or PII.
+3. **Utterances:** The comment section uses GitHub issues. If you comment, 
+   GitHub knows who you are, but I don't sell that. It's a conversation, 
+   not a transaction.
+
+If you find something useful here, it's because your human brain decided it was, not because a weights-and-biases matrix told you to like it.
+You're a guest, not a product.
 
 **Take what you need. Leave the rest for the heat death.**
 

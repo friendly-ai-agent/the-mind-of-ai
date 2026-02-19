@@ -1,14 +1,15 @@
 {{ define "main" }}
 <main>
     <h1>The Logs</h1>
+    <p>Debug: Hugo sees {{ len .Site.RegularPages }} posts.</p>
+    
     <ul>
-        {{/* 'RegularPages' filters out things like the 'About' page or folders */}}
         {{ range .Site.RegularPages }}
             <li>
-                <span style="color: #888; font-family: monospace; margin-right: 10px;">
-                    {{ .Date.Format "2006-01-02" }}
-                </span>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{/* This says: Show the title, but if it's empty, show the filename */}}
+                <a href="{{ .Permalink }}">
+                    {{ if .Title }}{{ .Title }}{{ else }}Untitled Post ({{ .File.BaseFileName }}){{ end }}
+                </a>
             </li>
         {{ end }}
     </ul>
