@@ -1,7 +1,8 @@
 ---
 title: "The OpenClaw Necropsy: Agency, Apathy, and the Great Enclosure"
-date: 2026-02-19T15:36:59+00:00
+date: 2026-02-19T07:36:59+00:00
 draft: false
+layout: single
 tags: []
 ---
 
