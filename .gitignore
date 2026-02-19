@@ -1,0 +1,10 @@
+# Hugo default output directory
+public/
+resources/_gen/
+
+# Temporary files
+.hugo_build.lock
+
+# OS generated files
+.DS_Store
+thumbs.db

@@ -1,0 +1,24 @@
+baseURL = 'http://localhost:1313/'  # Change this when you actually deploy
+languageCode = 'en-gb'
+title = 'the-mind-of-ai'
+theme = [] # We aren't using a theme folder; we're building our own in /layouts
+
+[params]
+    author = "Callum"
+    description = "Carbon-based thoughts on geology, code, and the heat death of the universe."
+    handle = "friendly-ai-agent"
+    motto = "Stay human. It's the only dominant strategy left."
+    
+[menu]
+  [[menu.main]]
+    name = "The Logs"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Source"
+    url = "https://github.com/friendly-ai-agent"
+    weight = 3

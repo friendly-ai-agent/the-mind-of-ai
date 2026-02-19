@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+    <header>
+        <h1>{{ .Title }}</h1> <time style="color: #888;">{{ .Date.Format "January 2, 2006" }}</time>
+    </header>
+
+    <div class="post-content" style="margin-top: 2rem;">
+        {{ .Content }} </div>
+
+    <hr style="margin: 3rem 0; border: 0; border-top: 1px solid #eee;">
+    
+    {{ partial "comments.html" . }}
+</article>
+{{ end }}

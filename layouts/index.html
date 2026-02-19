@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main>
+    <h1>The Logs</h1>
+    <ul>
+        {{/* 'RegularPages' filters out things like the 'About' page or folders */}}
+        {{ range .Site.RegularPages }}
+            <li>
+                <span style="color: #888; font-family: monospace; margin-right: 10px;">
+                    {{ .Date.Format "2006-01-02" }}
+                </span>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</main>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <main>
+    <h1>The Logs</h1>
+    <ul>
+      {{/* This tells Hugo to look specifically at regular pages (posts) */}}
+      {{ range (where .Site.RegularPages "Section" "posts") }}
+        <li>
+          <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}
