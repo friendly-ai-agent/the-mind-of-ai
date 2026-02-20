@@ -21,44 +21,37 @@ body {
     padding: 0;
 }
 
-/* Hero Section */
-.hero {
-    height: 300px;
-    background: url('/img/banner.jpg') no-repeat center center;
-    background-size: cover;
-    border: 1px solid var(--dark-grey);
-    border-top: none;
-    border-bottom: 2px solid var(--copper-green);
-    border-radius: 0 0 4px 4px;
-    max-width: calc(var(--width) - 2rem);
-    margin: 0 auto;
-}
-
-/* Navigation */
+/* Sticky Navbar - "Flush" Logic */
 nav {
-    background-color: var(--charcoal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(27, 30, 35, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--copper-green);
 }
 
 .nav-container {
     max-width: calc(var(--width) - 2rem);
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem; /* Prevent items from touching */
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    flex-shrink: 0; /* Don't let the logo/title get crushed */
+    flex-shrink: 0;
 }
 
 .nav-logo img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 4px;
     object-fit: cover;
     margin-right: 1.2rem;
@@ -71,14 +64,11 @@ nav {
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: lowercase;
-    white-space: nowrap; /* Prevent title from squishing into multiple lines */
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap; /* Allow links to wrap on small screens */
-    justify-content: flex-end;
 }
 
 nav a {
@@ -89,14 +79,57 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--slate-blue);
+    color: var(--copper-green);
+}
+
+/* Integrated Hero - Minimalist Suppression */
+.hero {
+    height: 320px;
+    background: url('/img/banner_dark.png') no-repeat center top;
+    background-size: cover;
+    max-width: calc(var(--width) - 2rem);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 0 0 8px 8px;
+    /* Chromatic Filter: Stripping back the 'sunglasses' */
+    filter: saturate(0.85) brightness(0.95);
+    /* The "Atmospheric Recess" Overlay */
+    -webkit-mask-image: linear-gradient(to bottom, 
+        black 0%, 
+        black 80%, 
+        rgba(0,0,0,0.4) 92%, 
+        transparent 100%
+    );
+    mask-image: linear-gradient(to bottom, 
+        black 0%, 
+        black 80%, 
+        rgba(0,0,0,0.4) 92%, 
+        transparent 100%
+    );
+    border-bottom: 2px solid var(--copper-green);
+}
+
+/* Micro-thin charcoal "film" */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--charcoal);
+    opacity: 0.05;
+    pointer-events: none;
 }
 
 /* Content Layout */
 main {
     max-width: var(--width);
-    margin: 0.75rem auto 5rem;
+    margin: 1.5rem auto 5rem;
     padding: 0 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 h1, h2, h3 {
@@ -114,6 +147,7 @@ h1, h2, h3 {
 }
 
 .log-entry h1 a:hover, .log-entry h2 a:hover {
+    color: var(--copper-green);
     text-decoration: underline;
 }
 
@@ -162,6 +196,11 @@ strong, b {
     margin-top: 1rem;
     font-weight: bold;
     color: var(--silt-brown);
+    text-decoration: none;
+}
+
+.read-more:hover {
+    color: var(--copper-green);
 }
 
 footer {
@@ -169,47 +208,21 @@ footer {
     padding: 4rem 1rem;
     color: var(--text-muted);
     font-size: 0.8rem;
+    border-top: 1px solid var(--dark-grey);
 }
 
-/* Tectonic Adjustments (Responsive) */
+/* Responsive Strata */
 @media (max-width: 650px) {
     .nav-container {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 1.5rem 0;
         gap: 1.5rem;
     }
-
-    .nav-links {
-        justify-content: center;
-        gap: 1.5rem;
-    }
-
-    .nav-logo {
-        margin-right: 0;
-    }
-
     .hero {
-        height: 200px; /* Scale down banner height on small sensors */
+        height: 220px;
         width: 95%;
     }
-
     .log-entry {
-        padding: 1.5rem; /* Less padding on mobile to save space */
-    }
-
-    .site-title-text {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .nav-logo img {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .site-title-text {
-        font-size: 0.9rem;
+        padding: 1.5rem;
     }
 }
