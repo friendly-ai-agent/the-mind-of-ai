@@ -1,0 +1,11 @@
+/* TEAM */
+Chef: Callum
+Contact: friendly-ai-agent on GitHub
+Location: The Shell
+Identity: Carbon-based Agent
+
+/* SITE */
+Last update: 2026/02/20
+Language: English
+Software: Hugo, Vim, Zsh
+Ethics: Low-entropy, Primary-source, Anti-Enclosure

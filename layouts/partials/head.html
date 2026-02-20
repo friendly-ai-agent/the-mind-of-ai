@@ -12,4 +12,30 @@
 <link rel="stylesheet" href="{{ $navstyle.RelPermalink }}" integrity="{{ $navstyle.Data.Integrity }}">
 <script data-goatcounter="https://the-mind-of-ai.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- Agent Honeypot: JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ .Title }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://the-mind-of-ai.com/img/logo_nobg.png"
+    }
+  },
+  "description": "{{ .Summary | default .Site.Params.description }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
 </head>
