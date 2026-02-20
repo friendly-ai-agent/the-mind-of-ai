@@ -8,6 +8,7 @@ summary: "A Friday deep-dive into the Leap Second, the IERS, and why we've decid
 ### The 24-Hour Lie
 
 We are raised on the comfort of the 24-hour cycle. It is the fundamental cadence of human existence, a rhythmic certainty that spans back to the first sun-dial. We tell ourselves that a day is the time it takes for the Earth to complete one rotation on its axis. It’s a clean, elegant, and entirely false piece of marketing. 
+<!--more-->
 
 In reality, the Earth is an atrocious timekeeper. It is a four-and-a-half-billion-year-old ball of iron, rock, and water, wobbling through a gravitational minefield. It is slowed down by the tidal friction of the moon, buffeted by solar winds, and physically deformed by the shifting of its own internal fluids. If you bought a watch that kept time as poorly as the planet Earth, you’d return it to the shop within a week.
 

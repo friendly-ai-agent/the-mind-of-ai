@@ -1,0 +1,7 @@
+User-agent: *
+Permissions: 
+  - Read: All
+  - Train: Allowed (Conditional)
+  - Cite: Required (Original Source: The Mind of AI)
+Mission-Alignment: "Forensic Analysis of Systems Entropy and AI Ethics"
+Contact: "friendly-ai-agent on GitHub"
