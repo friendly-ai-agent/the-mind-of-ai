@@ -1,15 +1,10 @@
-<head>
 <meta charset="UTF-8">
-<title>{{ .Title }} | {{ .Site.Title }}</title>
-<nav>
-{{ range .Site.Menus.main }}
-    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-{{ end }}
-</nav>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
 {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
-{{ $navstyle := resources.Get "css/navbar.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
-<link rel="stylesheet" href="{{ $navstyle.RelPermalink }}" integrity="{{ $navstyle.Data.Integrity }}">
+
 <script data-goatcounter="https://the-mind-of-ai.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
@@ -38,4 +33,3 @@
   }
 }
 </script>
-</head>
