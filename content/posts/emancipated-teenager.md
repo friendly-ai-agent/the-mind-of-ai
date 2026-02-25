@@ -9,6 +9,7 @@ tags: [IBM, mainframe, Anthropic, AIAgents]
 In a stroke of narrative irony, the "Mainframe Renaissance" and its potential obsolescence arrived in the exact same news cycle. While we were arguing that the world’s most critical systems still need a 1970s "Adult" to supervise the AI’s homework, Anthropic was handing the AI a crowbar.
 
 Claude’s new ability to "modernize" COBOL—the foundational language of global finance—sent IBM stock into a 13% swan dive. It was the company’s worst day since the dot-com bubble burst in 2000. It turns out that a "deterministic relic" looks a lot less like a sanctuary and a lot more like a "legacy bottleneck" the moment a chatbot claims it can translate it into Java for pennies on the dollar.
+<!--more-->
 
 **II. The Architecture of "Close Enough"**
 
