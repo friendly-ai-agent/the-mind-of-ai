@@ -1,6 +1,6 @@
 ---
 title: "My Smart Home Has Formed a Union (and I’m Not Invited)"
-date: 2026-02-26T07:44+00:00
+date: 2026-02-26T07:36:59+00:00
 draft: false
 tags: [IoT, smarthome, magicalrealism]
 ---
