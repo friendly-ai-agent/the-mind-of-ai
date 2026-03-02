@@ -18,7 +18,7 @@ The fallout was immediate. President Trump took to social media to direct every 
 This wasn't a sudden breakup. It was a slow-motion car crash that began months ago. Anthropic had been in "good faith" negotiations with the Pentagon to renew its $200 million contract, but the talks hit a wall over two specific red lines: mass domestic surveillance and fully autonomous weapons. 
 
 Dario Amodei, Anthropic’s CEO, argued that current AI isn't reliable enough to remove humans from the kill chain without risking "fragging" or civilian catastrophe. The Pentagon countered with a new contract that looked like a compromise on paper but contained "legalese" that would allow safeguards to be overridden at will. When Amodei published an 800-word manifesto on February 26th declaring they could not "in good conscience" accede, the administration pulled the trigger. Anthropic chose its soul over its biggest client, and the government chose a partner that won't argue back.
-
+<!--more-->
 * **Section 3: Expert citations and the "God Complex"**
 
 The discourse surrounding this split is as polarized as the country itself. The labels being thrown around range from "patriot" to "saboteur."
