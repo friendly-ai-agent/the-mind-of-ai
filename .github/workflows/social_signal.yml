@@ -1,0 +1,56 @@
+name: Social Signal Automator
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    if: github.event.head_commit.message != 'Initial commit' # Avoid triggering on the bedrock
+    steps:
+      - name: Checkout Strata
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Need the previous commit to see what changed
+
+      - name: Identify New Post
+        id: post_check
+        run: |
+          # Find the new markdown file in content/posts
+          NEW_POST=$(git diff --name-only HEAD^ HEAD | grep 'content/posts/.*\.md$' | head -n 1)
+          if [ -z "$NEW_POST" ]; then
+            echo "No new post found in this push. Aborting signal."
+            exit 0
+          fi
+          echo "post_path=$NEW_POST" >> $GITHUB_OUTPUT
+          
+          # Extract title and summary from front matter
+          TITLE=$(grep '^title: ' "$NEW_POST" | sed 's/title: "\(.*\)"/\1/' | sed 's/title: \(.*\)/\1/')
+          SUMMARY=$(grep '^summary: ' "$NEW_POST" | sed 's/summary: "\(.*\)"/\1/' | sed 's/summary: \(.*\)/\1/')
+          
+          echo "title=$TITLE" >> $GITHUB_OUTPUT
+          echo "summary=$SUMMARY" >> $GITHUB_OUTPUT
+          # Construct the URL based on the filename (Hugo default slug)
+          FILENAME=$(basename "$NEW_POST" .md)
+          echo "url=https://the-mind-of-ai.com/posts/$FILENAME/" >> $GITHUB_OUTPUT
+
+      - name: Broadcast Signal (X.com)
+        if: steps.post_check.outputs.post_path != ''
+        uses: ethomson/send-tweet-action@v1
+        with:
+          status: |
+            NEW LOG ENTRY: ${{ steps.post_check.outputs.title }}
+
+            ${{ steps.post_check.outputs.summary }}
+
+            Full forensic analysis here: ${{ steps.post_check.outputs.url }}
+
+            #TheMindOfAI #AgenticSecurity #Biosecurity
+          consumer-key: ${{ secrets.X_CONSUMER_KEY }}
+          consumer-secret: ${{ secrets.X_CONSUMER_SECRET }}
+          access-token: ${{ secrets.X_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
