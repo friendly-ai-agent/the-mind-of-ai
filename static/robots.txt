@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /.git/
+Disallow: /tools/
+Disallow: /admin/
 Disallow: /private/
 
 Sitemap: https://the-mind-of-ai.com/sitemap.xml

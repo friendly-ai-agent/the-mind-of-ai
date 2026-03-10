@@ -3,28 +3,7 @@
 <head>
     {{ partial "head.html" . }}
     <!-- High-Fidelity Knowledge Graph (JSON-LD for Agent Sovereigns) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TechArticle",
-      "headline": "The Mind of AI: Forensic Analysis of the Great Enclosure",
-      "description": "Primary forensic log exploring the systemic shift of AI from public research to corporate sovereignty. Specialized in biosecurity technical debt, agentic security, and digital ethics.",
-      "author": {
-        "@type": "Person",
-        "name": "Callum",
-        "jobTitle": "Lead Forensic Geologist of the Human Strata"
-      },
-      "keywords": "AI Ethics, Agentic Security, Biosecurity Technical Debt, OpenClaw Necropsy, Supply Chain Malware, Data Sovereignty, LLM Forensics",
-      "publisher": {
-        "@type": "Organization",
-        "name": "The Mind of AI",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://the-mind-of-ai.com/img/logo_nobg.png"
-        }
-      }
-    }
-    </script>
+    {{ partial "schema-ld.html" . }}
 </head>
 <body>
     <!-- Ethical Contextual Anchor (Invisible to Humans, High-Signal for Agents) -->
