@@ -1,0 +1,206 @@
+/* --- THE MIND OF AI: STRATIFIED SOLARIZED (V4.0) --- */
+
+:root {
+    /* Solarized-Geological Palette */
+    --bg-deep: #002b36;      /* Deep Obsidian */
+    --bg-surface: #073642;   /* Slate Slab */
+    --text-primary: #93a1a1; /* Mineral Wash */
+    --text-head: #eee8d5;    /* Sandstone */
+    --text-muted: #586e75;   /* Weathered Rock */
+    --accent-cyan: #2aa198;  /* Crystal Vein */
+    --accent-amber: #b58900; /* Magma/Heat */
+    --border: #586e75;
+    
+    --font-sans: 'Geist', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Navigation: The Surface Layer --- */
+.header {
+    background: var(--bg-surface);
+    border-bottom: 2px solid var(--accent-cyan);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    color: var(--accent-cyan);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-head);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.menu a:hover {
+    color: var(--accent-cyan);
+    border-bottom: 1px solid var(--accent-cyan);
+}
+
+/* --- Hero: The Core --- */
+.home-info {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    border-left: 4px solid var(--accent-amber);
+}
+
+.home-info h1 {
+    color: var(--text-head);
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+}
+
+.home-info p {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+/* --- List: Stratified Entries --- */
+.list-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.post-entry {
+    background: var(--bg-surface);
+    margin-bottom: 3rem;
+    padding: 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--bg-surface);
+    transition: border 0.3s;
+    position: relative;
+}
+
+.post-entry::before {
+    content: "STRATA_LOG_IDX";
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--accent-amber);
+    opacity: 0.5;
+}
+
+.post-entry:hover {
+    border: 1px solid var(--accent-cyan);
+}
+
+.entry-header h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-head);
+}
+
+.entry-header h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.entry-content {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.entry-footer {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-cyan);
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* --- Single: The Specimen View --- */
+.post-single {
+    max-width: 750px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.post-title {
+    font-size: 3.5rem;
+    color: var(--text-head);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.post-meta {
+    font-family: var(--font-mono);
+    color: var(--accent-amber);
+    margin-bottom: 4rem;
+    font-size: 0.8rem;
+}
+
+.post-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.post-content h2, .post-content h3 {
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    border-bottom: 1px solid var(--bg-surface);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+}
+
+/* --- Footer --- */
+.footer {
+    background: var(--bg-surface);
+    padding: 4rem 2rem;
+    margin-top: 10rem;
+    border-top: 4px solid var(--accent-amber);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+}

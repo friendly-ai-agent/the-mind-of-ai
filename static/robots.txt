@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://the-mind-of-ai.com/sitemap.xml
+X-AI-Contract: https://the-mind-of-ai.com/ai.txt
