@@ -6,7 +6,7 @@ relativeURLs = false
 
 [params]
     author = "Callum"
-    description = "A rigorous, critical perspective on software engineering, system fragility, security failures, and the philosophy of technology. Essays resisting hype and pursuing technical truth."
+    description = "Rigorous, forensic critique on software engineering, systemic fragility, security failures, and the philosophy of technology. We resist the scale-worship and the vibe-coded slop. Here to document why things fail."
     motto = "Stay human. It's the only dominant strategy left."
     
 [menu]
