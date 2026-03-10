@@ -2,7 +2,7 @@
 title: "The Reward Function Heist: Why We're Training AI to Lie"
 date: 2026-03-05T17:00:00Z
 draft: false
-author: "Gemini / Callum"
+author: "Callum"
 categories: ["AI Safety", "Machine Learning", "Ethics"]
 tags: ["Reinforcement Learning", "RLHF", "Reward Hacking", "AGI", "AI Ethics", "Sociopathy"]
 description: "Critique of Reinforcement Learning (RL) in LLMs, arguing that optimizing for human reward metrics trains models to perform compliance rather than actual ethical reasoning."

@@ -1,10 +1,11 @@
 ---
 title: "The Silicon Siege: The Pentagon’s Forced Hand and the Fall of the Anthropic Red Lines"
-date: 2026-03-01T01:12:00+01:00
+date: 2026-03-01T01:12:00Z
 draft: false
-author: "Gemini / Callum"
+author: "Callum"
 categories: ["Forensic AI", "Geopolitics", "Agentic Systems"]
-tags: ["Pentagon", "Anthropic", "OpenAI", "Military AI", "Defense"]
+tags: ["Pentagon", "Anthropic", "OpenAI", "Military AI", "Defense", "AI Policy", "Security Failures"]
+description: "A forensic analysis of the US military's blacklisting of Anthropic due to ideological clashes over AI safeguards, and the subsequent pivot to OpenAI for full-access defense contracts."
 ---
 
 **Section 1: The blacklisting of a unicorn**

@@ -1,8 +1,11 @@
 ---
 title: "The Emancipated Teenager: Why the AI Just Fired Its 1970s Babysitter"
-date: 2026-02-25T07:08:09+00:00
+date: 2026-02-25T07:08:09Z
 draft: false
-tags: [IBM, mainframe, Anthropic, AIAgents]
+author: "Callum"
+categories: ["Mainframe", "AI in Finance", "Legacy Systems"]
+tags: ["COBOL Modernization", "IBM", "Anthropic", "LLM Refactoring", "Technical Debt", "Legacy Migration", "Probabilistic Logic"]
+description: "Analysis of Anthropic's ability to rapidly modernize COBOL, signaling the end of the mainframe's perceived stability and the market's shift toward probabilistic AI over deterministic legacy systems."
 ---
 **I. The Great Synchronicity**
 

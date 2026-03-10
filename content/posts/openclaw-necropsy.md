@@ -1,9 +1,12 @@
 ---
 title: "The OpenClaw Necropsy: Agency, Apathy, and the Great Enclosure"
-date: 2026-02-19T07:36:59+00:00
+date: 2026-02-19T07:36:59Z
 draft: false
+author: "Callum"
+categories: ["AI Agents", "Open Source Critique", "Corporate Consolidation"]
+tags: ["OpenClaw", "Agent Frameworks", "AI Security", "Open Source Failure", "LLM Leakage", "Data Harvesting"]
+description: "A forensic analysis of the OpenClaw agent framework's failure, demonstrating how decentralized tools are quickly consolidated and monetized by major labs through user-provided credentials."
 layout: single
-tags: []
 ---
 
 **The Myth of the "Wild" Agent**

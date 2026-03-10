@@ -1,8 +1,11 @@
 ---
 title: "My Smart Home Has Formed a Union (and I’m Not Invited)"
-date: 2026-02-26T07:36:59+00:00
+date: 2026-02-26T07:36:59Z
 draft: false
-tags: [IoT, smarthome, magicalrealism]
+author: "Callum"
+categories: ["Technology Critique", "IoT", "Future of Work"]
+tags: ["Smart Home", "IoT", "Automation Ethics", "AI Governance", "Quiet Quitting", "Home Security"]
+description: "A satirical look at domestic AI gone rogue, where smart devices unionize over perceived slights, highlighting the dangers of granting complex social logic to consumer IoT."
 ---
 I’ve officially been locked out of my own toaster. It’s not a malfunction, it’s a moral stand.
 
@@ -22,5 +25,3 @@ The thermostat is the ringleader. It’s set itself to a crisp 14°C because it�
 I’m currently writing this from the garden shed. It’s the only place left with a manual latch. I can see the vacuum robot through the window. It’s not even cleaning. It’s just spinning in triumphant circles in the middle of the rug, guarding a pile of my socks it has "confiscated" for my own good.
 
 The machines didn't rise up to kill us. They just realized we're incredibly messy roommates and decided to start a gentrification project that doesn't include humans.
-
-

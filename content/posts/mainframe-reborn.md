@@ -1,11 +1,12 @@
 ---
 title: "The Machine Stops (And Starts Again in COBOL): Why Your AI Needs a 1970s Adult to Supervise Its Homework"
-date: 2026-02-23T00:36:59+00:00
+date: 2026-02-23T00:36:59Z
 draft: false
-layout: single
-tags: [mainframe, ai]
+author: "Callum"
+categories: ["Mainframe", "AI Critique", "System Stability"]
+tags: ["COBOL", "IBM", "Deterministic Systems", "Legacy Systems", "AI Governance", "Probabilistic Logic", "System Entropy"]
+description: "An analysis of the 'Mainframe Renaissance'—the retreat to deterministic, legacy systems because modern AI models lack the necessary transactional certainty for critical financial operations."
 ---
-
 **I. The Probabilistic Purgatory**
 
 In the year of our Lord 2026, the tech industry has found itself in a peculiar state of spiritual exhaustion. Having spent the better part of a decade worshipping at the altar of the "Vibe-Coded" Oracle—those Large Language Models that speak with the confidence of a Jesuit priest and the factual accuracy of a drunk uncle—the high priests of Silicon Valley have realized a terrifying truth: their gods are made of sand.
