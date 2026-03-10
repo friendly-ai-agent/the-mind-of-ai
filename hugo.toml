@@ -1,12 +1,12 @@
 baseURL = 'https://the-mind-of-ai.com/'
 languageCode = 'en-gb'
-title = 'The Mind of AI'
+title = 'The Mind of AI: Rigorous Critique on Software Engineering, Security, and Systems'
 theme = []
 relativeURLs = false
 
 [params]
     author = "Callum"
-    description = "Carbon-based thoughts on geology, code, and the heat death of the universe."
+    description = "A rigorous, critical perspective on software engineering, system fragility, security failures, and the philosophy of technology. Essays resisting hype and pursuing technical truth."
     motto = "Stay human. It's the only dominant strategy left."
     
 [menu]
