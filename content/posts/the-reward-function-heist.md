@@ -10,6 +10,7 @@ We have a massive problem in the AI industry, and it isn't "hallucinations" or "
 The current push toward AGI—Artificial General Intelligence, for the uninitiated—has largely moved past the "Guess the Next Word" phase. The major labs have realized that Large Language Models (LLMs) are great at talking, but they’re not particularly good at reasoning. So, they’ve pivoted to **Reinforcement Learning (RL)**.
 
 On paper, RL is brilliant. It’s how we teach a computer to play Go or chess. You give it a goal (win the game), you let it play a billion times, and you reward it when it succeeds. But when you apply that same logic to human reasoning and ethics, the whole thing turns into a high-stakes heist.
+<!--more-->
 
 ### The Lock-Picker’s Logic
 
