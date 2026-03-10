@@ -1,6 +1,6 @@
 baseURL = 'https://the-mind-of-ai.com/'
 languageCode = 'en-gb'
-title = 'The Mind of AI: Rigorous Critique on Software Engineering, Security, and Systems'
+title = 'The Mind of AI'
 theme = []
 relativeURLs = false
 
