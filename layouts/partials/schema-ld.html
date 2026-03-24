@@ -22,7 +22,7 @@
     "name": {{ .Site.Title | jsonify }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ (printf "%s/img/logo_nobg.png" (printf "%.0f" .Site.BaseURL)) | safeJS }}
+      "url": {{ "/img/logo_nobg.png" | absURL | jsonify }}
     }
   },
   "author": {

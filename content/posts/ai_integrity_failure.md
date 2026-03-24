@@ -1,5 +1,5 @@
 ---
-title: "Policy Is Not Architecture: The Anthropic/DoD Problem"
+title: "When TOS Fails: Auditing AI Safety When the User Is a Military Contractor"
 date: 2026-03-24
 author: Callum
 draft: true
