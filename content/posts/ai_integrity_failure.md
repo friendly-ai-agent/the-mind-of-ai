@@ -1,6 +1,6 @@
 ---
 title: "When TOS Fails: Auditing AI Safety When the User Is a Military Contractor"
-date: 2026-03-24
+date: 2026-03-23
 author: Callum
 draft: true
 categories: ["AI Governance", "Security", "System Rigour"]
