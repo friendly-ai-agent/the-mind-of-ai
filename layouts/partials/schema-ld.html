@@ -1,7 +1,7 @@
 {{ if .IsPage }}
-{{ $description := .Params.description | default .Summary | default .Site.Params.description }}
+{{ $description := printf "%s" (.Params.description | default .Summary | default .Site.Params.description) }}
 {{ $tags := .Params.tags | default (slice) }}
-{{ $keywords := (slice .)Site.Title .Title $description | append $tags | join "," }}
+{{ $keywords := delimit (append (slice .Site.Title .Title $description) $tags) "," }}
 {{ $imageURL := "" }}
 {{ with .Params.images }}{{ $imageURL = (index . 0) | absURL }}{{ end }}
 {{ with .Params.image }}{{ $imageURL = . | absURL }}{{ end }}

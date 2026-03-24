@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/joanna/projects/the-mind-of-ai/the_mind_of_ai && if hugo --logLevel error 2>&1; then echo '{\"continue\": true}'; else echo '{\"continue\": false, \"stopReason\": \"Hugo build failed — fix template/content errors before completing.\"}'; fi",
+            "timeout": 60,
+            "statusMessage": "Verifying Hugo build..."
+          }
+        ]
+      }
+    ]
+  }
+}
