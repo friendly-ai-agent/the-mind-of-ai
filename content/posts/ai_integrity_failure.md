@@ -2,7 +2,7 @@
 title: "When TOS Fails: Auditing AI Safety When the User Is a Military Contractor"
 date: 2026-03-23
 author: Callum
-draft: true
+draft: false
 categories: ["AI Governance", "Security", "System Rigour"]
 summary: "Anthropic banned Claude for weapons targeting. The U.S. military used it anyway. This is what happens when you mistake a ToS clause for a safety constraint."
 ---
